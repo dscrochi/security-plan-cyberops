@@ -24,21 +24,28 @@
             font-size: 1.75em;
             margin-bottom: 20px;
         }
+        h3 {
+            color: #0056b3;
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
         ol {
             list-style-type: none;
-            counter-reset: list; /* To reset the list counter */
+            counter-reset: list; /* Reset the counter */
             padding-left: 0;
         }
         li {
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-between; /* Align items between left and right */
             align-items: center;
             margin-bottom: 10px;
         }
         li::before {
             counter-increment: list; /* Increment the counter */
             content: counter(list) ". "; /* Display the number with a period */
-            margin-right: 10px;
+            margin-left: 10px; /* Space on the left side */
         }
         .dots {
             flex-grow: 1;
@@ -49,9 +56,13 @@
         a {
             text-decoration: none;
             color: #007bff;
+            order: -1; /* Put the link before the number */
         }
         a:hover {
             text-decoration: underline;
+        }
+        li::before {
+            order: 1; /* Place the number on the right */
         }
         @media (max-width: 600px) {
             body {
@@ -68,21 +79,49 @@
 </head>
 <body>
     <h1>Daniel's Security Plan</h1>
-    <h2>Table of Contents</h2>
+    <h2>Policies and Procedures</h2>
+
+    <!-- Access Control Policies -->
+    <h3>Access Control Policies</h3>
     <ol>
-        <li><span class="dots"></span><a    href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt207beda4b7c14d22/636f1a30e3836b0c88e8f0a8/Acceptable_Use_Policy.pdf">Acceptable Use Policy</a></li>
-        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/bltc96a4c2cb0dcef43/636db4142e16be076e6e003f/Remote_Access_Policy.pdf">Remote Access Policy</a></li>
+        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt207beda4b7c14d22/636f1a30e3836b0c88e8f0a8/Acceptable_Use_Policy.pdf">Acceptable Use Policy</a></li>
         <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/bltf5d5757503e36442/636f1a316bafb12e165da155/Password_Protection_Policy.pdf">Password Policy</a></li>
+        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/bltc96a4c2cb0dcef43/636db4142e16be076e6e003f/Remote_Access_Policy.pdf">Remote Access Policy</a></li>
+        <li><span class="dots"></span><a href="https://www.fcc.gov/sites/default/files/cyberplanner.pdf#page=21">Mobile Device Policy</a></li>
         <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt58634466a773ece6/5e9e09aac492412a1bbc16c1/mobile_employee_endpoint_responsibility_policy.pdf">Mobile Employee Endpoint Responsibility Policy</a></li>
-        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt16603a027193d8b9/5e9e0685f92340115007214d/risk_assessment_policy.pdf">Risk Assessment Policy</a></li>
-        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt7a3c2d6cf0ad2597/5e9ddf86f9234011500720bb/security_response_plan_policy.pdf">Security Response Policies</a></li>
-        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt8d579ad2ee089048/5e9e0783f92340115007215f/social_engineering_awareness_policy.pdf">Social Engineering and Awareness</a></li>
-        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt5f7dcd66ba712794/636db41d7487894eca7dcf9a/Wireless_Communication_Standard.pdf">Wireless Communication Standard</a></li>
-        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt01548092cfb7e2fc/636db415cb903f1137685558/Wireless_Communication_Policy.pdf">Wireless Communication Policy</a></li>
-        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt6cbaf88421cd16f6/5e9dfac0674ec260f325c430/router_and_switch_security_policy.pdf">Router and Switch Security Policy</a></li>
-        <li><span class="dots"></span><a href="https://www.fcc.gov/sites/default/files/cyberplanner.pdf#page=3">Privacy and Data Security</a></li>
-        <li><span class="dots"></span><a href="https://www.fcc.gov/sites/default/files/cyberplanner.pdf#page=8">Scams and Fraud Training</a></li>
-        <li><span class="dots"></span><a href="https://www.fcc.gov/sites/default/files/cyberplanner.pdf#page=11">Network Maintenance Policy</a></li>
     </ol>
+
+    <!-- Network & Device Security Policies -->
+    <h3>Network & Device Security Policies</h3>
+    <ol>
+        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt6cbaf88421cd16f6/5e9dfac0674ec260f325c430/router_and_switch_security_policy.pdf">Router and Switch Security Policy</a></li>
+        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt01548092cfb7e2fc/636db415cb903f1137685558/Wireless_Communication_Policy.pdf">Wireless Communication Policy</a></li>
+        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt5f7dcd66ba712794/636db41d7487894eca7dcf9a/Wireless_Communication_Standard.pdf">Wireless Communication Standard</a></li>
+OAOAOAOAOAOAOAOAOAOAOAOAOAOAOA        <li><span class="dots"></span><a href="https://www.fcc.gov/sites/default/files/cyberplanner.pdf#page=11">Network Maintenance Policy</a></li>
+    </ol>
+
+    <!-- Incident Response & Recovery -->
+OAOAOA    <h3>Incident Response & Recovery</h3>
+    <ol>
+        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt7a3c2d6cf0ad2597/5e9ddf86f9234011500720bb/security_response_plan_policy.pdf">Security Response Policies</a></li>
+        <li><span class="dots"></span><a href="https://www.fcc.gov/sites/default/files/cyberplanner.pdf#page=34">Incident Response Plan</a></li>
+    </ol>
+
+    <!-- Security Awareness & Training -->
+    <h3>Security Awareness & Training</h3>
+    <ol>
+        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt8d579ad2ee089048/5e9e0783f92340115007215f/social_engineering_awareness_policy.pdf">Social Engineering and Awareness</a></li>
+        <li><span class="dots"></span><a href="https://www.fcc.gov/sites/default/files/cyberplanner.pdf#page=8">Scams and Fraud Training</a></li>
+    </ol>
+
+    <!-- Compliance & Data Protection -->
+    <h3>Compliance & Data Protection</h3>
+    <ol>
+        <li><span class="dots"></span><a href="https://www.fcc.gov/sites/default/files/cyberplanner.pdf#page=3">Privacy and Data Security</a></li>
+        <li><span class="dots"></span><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt16603a027193d8b9/5e9e0685f92340115007214d/risk_assessment_policy.pdf">Risk Assessment Policy</a></li>
+        <li><span class="dots"></span><a href="https://www.fcc.gov/sites/default/files/cyberplanner.pdf#page=32">Payment Card Policy</a></li>
+        <li><span class="dots"></span><a href="https://www.fcc.gov/sites/default/files/cyberplanner.pdf#page=27">Physical Security Policy</a></li>
+    </ol>
+
 </body>
 </html>
